@@ -38,5 +38,5 @@ const mycar="porsche";
 echo mycar;
 
 //we can also define array constant using define()
-define ("cars", "bmw", "hyundai", "volkswagen");
+define ("cars", ["bmw", "hyundai", "volkswagen"]);
 echo cars[0];
