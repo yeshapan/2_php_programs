@@ -32,3 +32,11 @@ constant names must follow same rules as variable names except that they don'e n
 
 define("GREETING","welcome to GitHub!");
 echo GREETING;
+
+//you can also define constant using 'const' keyword
+const mycar="porsche";
+echo mycar;
+
+//we can also define array constant using define()
+define ("cars", "bmw", "hyundai", "volkswagen");
+echo cars[0];
