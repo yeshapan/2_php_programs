@@ -28,8 +28,6 @@ $x=$y=$z ="hello";
 /* constants are defined using define() function of php which takes two arguments: name and value of constant
 constant names must follow same rules as variable names except that they don'e need '$' prefix */
 
-//unlike variables, constants are automatically global across whole script
-
 define("GREETING","welcome to GitHub!");
 echo GREETING;
 
@@ -40,3 +38,10 @@ echo mycar;
 //we can also define array constant using define()
 define ("cars", ["bmw", "hyundai", "volkswagen"]);
 echo cars[0];
+
+//unlike variables, constants are automatically global across whole script
+define("GREETING", "welcome to github");
+function mytest(){
+  echo GREETING;
+}
+mytest();
