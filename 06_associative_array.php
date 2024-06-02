@@ -13,7 +13,13 @@
     foreach($car as $x=>$y){
         echo "$x: $y\n";
     }
-    
+
+    //to add single item in array, use [] with = operator
+    $car["detailing_wrap_color"]="black";
+
+    //to add multiple items in array, we can use += operator
+    $car+=["color"=>"white", "showroom"=>"Ahmedabad"];
+
     //for deleting array item, use unset() function
     unset($car["model"]);
 ?>
