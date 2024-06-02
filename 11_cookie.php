@@ -13,8 +13,10 @@
 <?php
     $cookie_name="user";
     $cookie_value="Nesta Archeron";
-    setcookie($cookie_name, $cookie_value, time()+(60*60*24*10));
+    setcookie($cookie_name, $cookie_value, time()+(60*60*24*10)); //expiry date is after 10 days
 ?>
+
+//NOTE: setcookie() function must appear before html tag
 
 <html>
     <body>
@@ -29,3 +31,8 @@
         ?>
     </body>
 </html>
+
+
+//to modify a cookie, just set it again using setcookie() function
+
+//to delete a cookie, use setcookie() function with expiry date in the past
