@@ -7,6 +7,7 @@
 *we can still see cart information on sites like amazon when we login next time coz it is stored in database
 */
 
+//code to store information
 <?php
     //start the session
     session_start();
@@ -20,6 +21,23 @@
         $_SESSION["fav_car"]="porsche";
         $_SESSION["fav_color"]="pink";
         echo "session variables have been set";
+        ?>
+    </body>
+</html>
+
+//code to get previously stored information
+<?php
+    //start the session
+    session_start();
+?>
+// start session before html tag
+<!DOCTYPE html>
+<html>
+    <body>
+        <?php
+        //to print session variables set previously
+        echo "favourite car is ".$_SESSION["fav_car"]."<br>";
+        echo "favourite color is ".$_SESSION["fav_color"]."<br>";
         ?>
     </body>
 </html>
