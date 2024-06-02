@@ -10,3 +10,11 @@
     </form>
   </body>
 </html>
+
+//to display submitted data you could simply echo all variables
+<html>
+  <body>
+    welcome <?php echo $POST["name"]; ?><br>
+    your email is: <?php echo $POST["email"]; ?>
+  </body>
+</html>
