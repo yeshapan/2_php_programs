@@ -40,3 +40,28 @@
         fwrite($myfile,$content);
         fclose($myfile);
 ?>
+        
+//whem we open file in write mode, all previous data gets erased and overwritten with new data
+//to append file, same code as above, just open file in append "a" mode instead of write "w" mode
+
+//using form (as given in ppt uploaded on classroom by prof):
+<?php
+        if(isset($_POST['myfile'])){
+            $myfile=$_POST['myfile'];
+            $content=$_POST['content'];
+            $file=fopen("myfile","w");
+            fwrite($file,$content);
+            fclose($file);
+            echo "File created";
+        }
+?>
+<form method="POST">
+    <input type="text" placeholder="enter file name:" name="filename">
+    <br>
+    <textarea name="content">
+    </textarea>
+    <br>
+    <button>Create File</button>
+    <br>
+</form>
+
