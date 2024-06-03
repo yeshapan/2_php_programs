@@ -11,3 +11,8 @@
     $object = new cons;
     
 ?>
+
+//A destructor is called when the object is destructed or the script is stopped or exited
+//If you create a __destruct() function, PHP will automatically call this function at the end of the script
+//Notice that the destruct function starts with two underscores (__)
+
