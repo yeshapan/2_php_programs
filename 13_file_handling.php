@@ -20,3 +20,23 @@
             }
     fclose($myfile);
 ?>
+
+//fgetc() is used to read single character from file
+<?php
+        $myfile=fopen("example.txt","r") or die("unable to open file");
+        while(!feof($myfile)){
+            echo fgetc($myfile);
+        }
+        fclose($myfile);
+?>
+
+//fwrite() is used to write to a file
+//first parameter of fwrite() contains the name of the file to write to and the second parameter is the string to be written
+<?php
+        $myfile=fopen("newfile.txt","w") or die("unable to open file");
+        $content="welcome to new file";
+        fwrite($myfile,$content);
+        $content="second line in the file";
+        fwrite($myfile,$content);
+        fclose($myfile);
+?>
